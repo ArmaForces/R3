@@ -10,3 +10,8 @@ Thumbs.db
 extension/build/*
 !extension/build/CMakeLists.txt
 extension/include/spdlog
+## Added by HEMTT
+releases/*
+keys/*
+.hemtt/local
+####

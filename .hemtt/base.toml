@@ -1,0 +1,7 @@
+name = "R3"
+prefix = "aar"
+author = "Titan"
+mainprefix = "z"
+files = ["mod.cpp"]
+folder_optionals = true
+sig_version = 3
