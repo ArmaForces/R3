@@ -2,6 +2,21 @@ name = "R3"
 prefix = "aar"
 author = "Titan"
 mainprefix = "z"
-files = ["mod.cpp"]
+exclude = ["*.psd", "*.png", "*.tga"]
+files = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "LICENSE",
+    "logo_aar_ca.paa",
+    "README.md"
+]
 folder_optionals = true
 sig_version = 3
+
+modname = "R3"
+key_name = "R3_{{version}}"
+authority = "R3_{{version}}"
+
+[header_exts]
+version= "{{git \"id 8\"}}"
