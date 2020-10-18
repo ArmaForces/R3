@@ -8,4 +8,4 @@ logoOver = "logo_aar_ca.paa";
 tooltip = "After Action Replay System";
 overview = "Server Side addon for capturing unit movement to a database for After Action Replays on a website";
 author = "Titan";
-overviewPicture = "logo_ace3_ca.paa";
+overviewPicture = "logo_aar_ca.paa";
