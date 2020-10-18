@@ -3,10 +3,7 @@
 #define MAINPREFIX z
 #define PREFIX aar
 
-#define MAJOR 1
-#define MINOR 2
-#define PATCHLVL 0
-#define BUILD 0
+#include "script_version.hpp"
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
@@ -14,4 +11,4 @@
 #define AAR_TAG AAR
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 0.0.1
+#define REQUIRED_VERSION 2.00
