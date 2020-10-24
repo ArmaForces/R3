@@ -17,4 +17,9 @@ GVAR(maxMarkerCountPerEvent) = 10;
 GVAR(insertFrequencyMarkers) = 10;
 GVAR(timeSinceLastMarkerInsert) = 0;
 
+["Logic", "init", {
+    params ["_logic"];
+    _logic setVariable ["r3_do_not_track", true];
+}] call CBA_fnc_addClassEventHandler;
+
 ADDON = true;
