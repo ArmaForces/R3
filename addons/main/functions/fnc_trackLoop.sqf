@@ -24,26 +24,11 @@ call FUNC(trackMarkers);
 
 [{
     if (GVAR(logEvents)) then {
-
+        GVAR(noPlayers) = playableUnits findIf {isPlayer _x} == -1;
         // We only want to log movements if there are players in the map
-        private _playerCount = 0;
+        if (GVAR(noPlayers)) exitWith {};
 
-        {
-            if (isPlayer _x) then {
-                _playerCount = _playerCount + 1;
-            };
-
-        } forEach playableUnits;
-
-        if (_playerCount > 0) then {
-
-            GVAR(noPlayers) = false;
-
-            call FUNC(trackInfantry);
-            call FUNC(trackVehicles);
-
-        } else {
-            GVAR(noPlayers) = true;
-        };
+        call FUNC(trackInfantry);
+        call FUNC(trackVehicles);
     };
 }, 1] call CBA_fnc_addPerFrameHandler;
