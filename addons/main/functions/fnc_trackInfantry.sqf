@@ -28,8 +28,6 @@ private _movementData = "";
 
     if !(_doNotTrack) then {
 
-        [_x] call FUNC(addInfantryEventHandlers);
-
         if (vehicle _x == _x && !(_x isKindOf "Logic")) then {
 
             private _unitUid = getPlayerUID _x;

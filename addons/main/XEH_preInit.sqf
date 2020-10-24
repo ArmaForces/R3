@@ -22,4 +22,6 @@ GVAR(timeSinceLastMarkerInsert) = 0;
     _logic setVariable ["r3_do_not_track", true];
 }] call CBA_fnc_addClassEventHandler;
 
+["CAManBase", "init", FUNC(addInfantryEventHandlers)] call CBA_fnc_addClassEventHandler;
+
 ADDON = true;

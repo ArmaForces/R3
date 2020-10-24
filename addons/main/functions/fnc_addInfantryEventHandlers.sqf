@@ -21,16 +21,14 @@ params [
     ["_unit", objNull]
 ];
 
-private _isSetupAlready = _unit getVariable ["eventsSetup", false];
+if (_unit getVariable ["eventsSetup", false]) exitWith {};
+_unit setVariable ["eventsSetup", true];
 
-if !(_isSetupAlready) then {
+_unit addMPEventHandler ["MPHit", FUNC(eventHit)];
+_unit addEventHandler ["IncomingMissile", FUNC(eventIncomingMissile)];
 
-    _unit setVariable ["eventsSetup", true, false];
+_unit addEventHandler ["Fired", FUNC(eventFired)];
 
-    _unit addMPEventHandler ["MPHit", FUNC(eventHit)];
-    _unit addEventHandler ["IncomingMissile", FUNC(eventIncomingMissile)];
+[_unit] call FUNC(addInfantryACEEventHandlers);
 
-    _unit addEventHandler ["Fired", FUNC(eventFired)];
-
-    [_unit] call FUNC(addInfantryACEEventHandlers);
-};
+nil
