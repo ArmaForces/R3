@@ -10,9 +10,10 @@ Thumbs.db
 extension/build/*
 !extension/build/CMakeLists.txt
 extension/include/spdlog
+config.properties
+r3_extension_log_*.txt
 ## Added by HEMTT
 releases/*
 keys/*
 .hemtt/local
 ####
-config.properties
