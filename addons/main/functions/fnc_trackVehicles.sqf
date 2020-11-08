@@ -39,7 +39,7 @@ private _movementData = "";
             private _vehicleClass = typeOf _x;
 
             // We want the iconpathname (without the .paa and without the full path) just the name of the icon
-            private _vehicleIconPathRaw = getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "icon");
+            private _vehicleIconPathRaw = getText (configOf _x >> "icon");
             private _splitIconPath = _vehicleIconPathRaw splitString "\.";
             private _vehicleIconName = _vehicleIconPathRaw;
 

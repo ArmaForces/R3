@@ -25,14 +25,14 @@ params [
 // Victim details
 private _victimUid = getPlayerUID _victim;
 private _victimPos = getPos _victim;
-private _victimType = getText (configFile >> "CfgVehicles" >> (typeOf _victim) >> "DisplayName");
+private _victimType = getText (configOf _victim >> "DisplayName");
 private _victimFaction = _victim call FUNC(calcSideInt);
 
 // Attacker details
 private _attackerPos = getPos _attacker;
-private _attackerType = getText (configFile >> "CfgVehicles" >> (typeOf _attacker) >> "DisplayName");
+private _attackerType = getText (configOf _attacker >> "DisplayName");
 private _attackerFaction = _attacker call FUNC(calcSideInt);
-private _attackerDistance = round (getPos _victim distance getPos _attacker);
+private _attackerDistance = round (_victim distance _attacker);
 
 private _attackerUid = getPlayerUID gunner vehicle _attacker;
 
