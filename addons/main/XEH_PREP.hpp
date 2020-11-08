@@ -27,3 +27,5 @@ PREP(trackLoop);
 PREP(trackInfantry);
 PREP(trackVehicles);
 PREP(trackMarkers);
+
+PREP(getVehicleIcon);
